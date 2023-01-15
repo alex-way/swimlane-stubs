@@ -9,6 +9,9 @@ packages = [{include = "swimlane-stubs"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 
+[tool.poetry.group.dev.dependencies]
+swimlane = "^10.11.0"
+
 [tool.black]
 line-length = 120
 
