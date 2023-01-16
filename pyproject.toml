@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "swimlane-stubs"
-version = "0.3.0"
+version = "0.3.1"
 description = "A small library to help with type hinting for the Swimlane Python SDK"
 authors = ["Alex Way <alexwa@softcat.com>"]
 readme = "README.md"
 packages = [{include = "swimlane-stubs"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 
 [tool.poetry.group.dev.dependencies]
 swimlane = "^10.11.0"
