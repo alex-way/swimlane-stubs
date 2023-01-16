@@ -1,9 +1,9 @@
-from _typeshed import Incomplete
+from typing import Any, Optional
 
 class _BulkModificationOperation:
-    type: Incomplete
-    value: Incomplete
-    def __init__(self, value) -> None: ...
+    type: Optional[str]
+    value: Any
+    def __init__(self, value: Any) -> None: ...
 
 class Replace(_BulkModificationOperation):
     type: str

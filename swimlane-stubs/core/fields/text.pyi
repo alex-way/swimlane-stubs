@@ -1,7 +1,8 @@
+from typing import Literal, Tuple, Type
+
 from .base import Field as Field
-from _typeshed import Incomplete
 
 class TextField(Field):
-    field_type: Incomplete
-    supported_types: Incomplete
+    field_type: Tuple[Literal["Core.Models.Fields.TextField, Core"], Literal["Core.Models.Fields.Text.TextField, Core"]]
+    supported_types: Tuple[Type[str]]
     def set_python(self, value): ...

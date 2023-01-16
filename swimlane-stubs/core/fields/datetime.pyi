@@ -1,7 +1,6 @@
-from .base import Field as Field
 from _typeshed import Incomplete
 
-UTC: Incomplete
+from .base import Field as Field
 
 class DatetimeField(Field):
     field_type: str

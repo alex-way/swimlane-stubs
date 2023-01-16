@@ -1,19 +1,20 @@
-from _typeshed import Incomplete
+from typing import List, Optional, Tuple
+
 from swimlane.core.resolver import SwimlaneResolver as SwimlaneResolver
 from swimlane.exceptions import ValidationError as ValidationError
 
 class Field(SwimlaneResolver):
-    field_type: Incomplete
-    supported_types: Incomplete
+    field_type: Optional[Tuple[str]]
+    supported_types: List[str]
     bulk_modify_support: bool
-    name: Incomplete
-    field_definition: Incomplete
-    key: Incomplete
-    id: Incomplete
-    input_type: Incomplete
-    required: Incomplete
-    readonly: Incomplete
-    multiselect: Incomplete
+    name: str
+    field_definition: str
+    key: str
+    id: str
+    input_type: str
+    required: bool
+    readonly: bool
+    multiselect: bool
     def __init__(self, name, record) -> None: ...
     @property
     def record(self): ...

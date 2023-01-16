@@ -1,5 +1,3 @@
-from _typeshed import Incomplete
-
 class Cursor:
     def __init__(self) -> None: ...
     def __len__(self): ...
@@ -9,5 +7,5 @@ class Cursor:
 class PaginatedCursor(Cursor):
     default_limit: int
     default_page_size: int
-    page_size: Incomplete
-    def __init__(self, limit=..., page_size=...) -> None: ...
+    page_size: int
+    def __init__(self, limit: int = ..., page_size: int = ...) -> None: ...

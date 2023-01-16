@@ -1,9 +1,11 @@
-from _typeshed import Incomplete
+from typing import Any, Dict, Optional
+
+from swimlane.core.client import Swimlane
 from swimlane.core.resources.base import APIResource as APIResource
 
 class Task(APIResource):
-    app_id: Incomplete
-    id: Incomplete
-    name: Incomplete
-    script: Incomplete
-    def __init__(self, swimlane, raw) -> None: ...
+    app_id: Optional[str]
+    id: Optional[str]
+    name: Optional[str]
+    script: Optional[str]
+    def __init__(self, swimlane: Swimlane, raw: Dict[str, Any]) -> None: ...

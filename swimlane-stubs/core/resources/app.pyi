@@ -1,6 +1,6 @@
 from typing import Any, Dict
 
-from _typeshed import Incomplete
+from swimlane.core.adapters.app_revision import AppRevisionAdapter
 
 from ... import Swimlane as Swimlane
 from ..adapters.record import RecordAdapter
@@ -15,7 +15,7 @@ class App(APIResource):
     tracking_id: str
     records: RecordAdapter
     reports: ReportAdapter
-    revisions: Incomplete
+    revisions: AppRevisionAdapter
     # todo: Provide TypedDict for _raw
     _raw: Dict[str, Any]
 

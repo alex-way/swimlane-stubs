@@ -1,7 +1,5 @@
 from typing import Optional
 
-from _typeshed import Incomplete
-
 from swimlane.core.adapters import AppAdapter as AppAdapter
 from swimlane.core.adapters import GroupAdapter as GroupAdapter
 from swimlane.core.adapters import HelperAdapter as HelperAdapter
@@ -15,14 +13,12 @@ from swimlane.exceptions import SwimlaneHTTP400Error as SwimlaneHTTP400Error
 from swimlane.utils.version import compare_versions as compare_versions
 from swimlane.utils.version import get_package_version as get_package_version
 
-logger: Incomplete
-
 class Swimlane:
-    resources_cache: Incomplete
+    resources_cache: ResourcesCache
     apps: AppAdapter
     users: UserAdapter
     groups: GroupAdapter
-    helpers: Incomplete
+    helpers: HelperAdapter
     def __init__(
         self,
         host: str,
@@ -35,7 +31,7 @@ class Swimlane:
         access_token: Optional[str] = None,
         write_to_read_only: bool = False,
     ) -> None: ...
-    def request(self, method, api_endpoint, **kwargs): ...
+    def request(self, method: str, api_endpoint: str, **kwargs): ...
     @property
     def settings(self): ...
     @property
@@ -50,12 +46,12 @@ class Swimlane:
     def user(self): ...
 
 class SwimlaneTokenAuth(SwimlaneResolver):
-    user: Incomplete
+    user: User
     def __init__(self, swimlane: Swimlane, access_token: str) -> None: ...
     def __call__(self, request): ...
 
 class SwimlaneJwtAuth(SwimlaneResolver):
-    user: Incomplete
+    user: User
     def __init__(self, swimlane: Swimlane, username: str, password: str) -> None: ...
     def __call__(self, request): ...
     def authenticate(self) -> None: ...

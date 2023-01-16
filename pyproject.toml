@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "swimlane-stubs"
-version = "0.3.1"
+version = "0.4.0"
 description = "A small library to help with type hinting for the Swimlane Python SDK"
 authors = ["Alex Way <alexwa@softcat.com>"]
 readme = "README.md"
